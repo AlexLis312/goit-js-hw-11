@@ -1,15 +1,12 @@
 import './styles.css';
 import { fetchImages } from './photos-API.js';
-import axios from 'axios';
 import SimpleLightbox from 'simplelightbox';
-
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
 
 const refs = {
   imageGallery: document.querySelector('.gallery'),
   searchform: document.querySelector('.search-form'),
-  input: document.querySelector('input'),
   loadMoreBtn: document.querySelector('.load-more'),
 };
 
@@ -17,7 +14,7 @@ let pageNum = 1;
 let currentSearch = '';
 let isLoading = false;
 
-refs.searchform.addEventListener('submit', async e => {
+refs.searchform.addEventListener('submit', e => {
   e.preventDefault();
   hide(refs.loadMoreBtn);
   pageNum = 1;
@@ -36,7 +33,7 @@ refs.searchform.addEventListener('submit', async e => {
   loadImages(currentSearch);
 });
 
-refs.loadMoreBtn.addEventListener('click', async () => {
+refs.loadMoreBtn.addEventListener('click', () => {
   if (isLoading || !currentSearch) return;
 
   pageNum += 1;
