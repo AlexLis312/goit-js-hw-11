@@ -15,10 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.9",
-    "chosen-js": "^1.8.7",
-    "flatpickr": "^4.6.13",
     "notiflix": "^3.2.7",
-    "slim-select": "^2.10.0"
+    "simplelightbox": "^2.14.3"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
@@ -29,5 +27,8 @@
     "process": "^0.11.10"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
-  "author": "Alex XeX <metalstyle545@gmail.com>"
+  "author": "Alex XeX <metalstyle545@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/AlexLis312/goit-js-hw-11/issues"
+  }
 }
